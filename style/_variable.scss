@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+
+$font-size-base: 1rem;
+$line-height-base: 1.5;
+
+$font-size-h1: $font-size-base * 4;
+$font-size-h2: $font-size-base * 3;
+$font-size-h3: $font-size-base * 2.25;
+$font-size-h4: $font-size-base * 2;
+$font-size-h5: $font-size-base * 1.5;
+$font-size-h6: $font-size-base * 1.25;
+
+$font-size-xl: $font-size-base * 3; //48px
+$font-size-l: $font-size-base * 2.25; //36px
+$font-size-m: $font-size-base * 1.75; //28px
+$font-size-s: $font-size-base * 1.25; //20px
+
+$h1-h6: (
+    h1: $font-size-h1,
+    h2: $font-size-h2,
+    h3: $font-size-h3,
+    h4: $font-size-h4,
+    h5: $font-size-h5,
+    h6: $font-size-h6
+);
+
+@each $key, $value in $h1-h6 {
+    .#{$key} {
+        font-size: $value;
+    }
+}
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-bolder: 900;
+
+// color
+$primary: #AA0601;
+$primary-dark: darken($primary, 12%);
+$dark: #111619;
+$light: #FBF2F2;
+$secondary: #650300;
+
+$color: (
+    primary: #AA0601,
+    primary-dark: darken($primary, 12%),
+    dark: #111619,
+    light: #FBF2F2,
+    secondary: #650300
+);
+
+@each $key, $value in $color {
+    .bg-#{$key} {
+        background-color: $value;
+    }
+    .text-#{$key} {
+        color: $value;
+    }
+}
+
+$display: (
+    flex: flex,
+    block: block,
+    inline: inline,
+    inline-block: inline-block,
+);
+
+@each $key, $value in $display {
+    .d-#{$key} {
+        display: $value;
+    }
+}
+

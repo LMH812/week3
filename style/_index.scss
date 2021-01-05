@@ -1,0 +1,571 @@
+.navbar {
+    font-size: $font-size-s;
+    background-color: $primary;
+    padding: 33px 56px 33px 88px;
+    justify-content: space-between;
+    ul {
+        align-items: center;
+        a {
+            text-decoration: none;
+            color: $light;
+        }
+        @include md {
+            width: 100%;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+    }
+    li {
+        padding-left: 32px;
+        padding-right: 32px;
+        @include lg {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        @include md {
+            padding: 8px 0;
+            width: 50%;
+            border: 1px solid #fff;
+        }
+    }
+    @include lg {
+        font-size: $font-size-s;
+        padding: 30px 19px 30px 19px;
+        align-items: center;
+    }
+    @include md {
+        padding: 10px 0 0 0;
+        flex-direction: column;
+        align-items: center;
+    }
+    img {
+        @include md {
+            width: 48px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.banner {
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/banner.png');
+    @include bg-cover;
+    text-align: right;
+    padding: 350px 0;
+    justify-content: flex-end;
+    h1 {
+        flex-direction: column;
+        font-weight: $font-weight-bold;
+        @include lg {
+            font-size: $font-size-xl;
+        }
+        @include md {
+            font-size: $font-size-h4;
+        }
+        span{
+            font-size: $font-size-l;
+            font-weight: $font-weight-medium;
+            @include lg {
+                font-size: $font-size-s;
+            }
+            @include md{
+                font-size: $font-size-base;
+            }
+        }
+    }
+    @include lg {
+        padding: 373px 39px 373px 0;
+    }
+    @include md {
+        background-image: url('https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/banner-sm.png?raw=true');
+        padding: 164px 15px 164px 0;
+    }
+}
+
+.server{
+    background-color: #AA06010D;
+    padding: 64px 0 80px 0;
+    font-weight: $font-weight-bold;
+    @include lg {
+        padding: 40px 0 80px 0;
+    }
+    @include md {
+        padding: 32px 0 52px 0;
+    }
+    h2{
+        text-align: center;
+        font-weight: $font-weight-bold;
+        margin-bottom: 75px;
+        @include md {
+            font-size: $font-size-h5;
+            margin-bottom: 20px;
+        }
+    }
+    ul{
+        width: 100%;
+        text-align: center;
+        align-items:  baseline;
+        @include lg {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @include md {
+            flex-direction: column;
+            margin: auto;
+        }
+        img{
+            margin-bottom: 39px;
+        }
+        li{
+            width: 25%;
+            padding-left: 15px;
+            padding-right: 15px;
+            @include lg {
+                width: 45%;
+                margin-bottom: 40px;
+            }
+            @include md {
+                width: 100%;
+                padding: 0 69px;
+            }
+            p{
+                text-align: left;
+            }
+            &:nth-child(2) {
+                order: -1;
+            }
+            &:nth-child(3) {
+                order: -1;
+            }
+        }
+    }
+}
+
+.classic {
+    padding: 64px 0 80px 0;
+    h3{
+        align-items: center;
+        font-style: italic;
+        padding: 0 30px;
+        @include md {
+            color: $light;
+        }
+    }
+    h3::before{
+        content: '';
+        height: 48px;
+        width: 48px;
+        margin-right: 8px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    img{
+        width: 53%;
+        @include md {
+            width: 100%;
+        }
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 60px;
+        font-weight: $font-weight-bold;
+        @include md {
+            font-size: $font-size-s;
+        }
+    }
+    ul {
+       flex-wrap: wrap;
+       @include lg {
+           padding-right: 39px;
+           padding-left: 39px;
+       }
+       @include md {
+           padding: 0 15px;
+       }
+       h3 {
+           @include lg {
+               font-size: $font-size-m;
+           }
+       }
+       li{
+           align-items: center;
+           margin-bottom: 32px;
+           position: relative;
+           @include md {
+               justify-content: center;
+               margin-bottom: 8px;
+           }
+           &:nth-child(2) {
+               justify-content: flex-end;
+               @include lg {
+                   flex-direction: row-reverse;
+               }
+               @include md {
+                   justify-content: center;
+               }
+           }
+        }
+        .item{
+            display: flex;
+            @include md {
+                position: absolute;
+            }
+        }
+    }
+}
+.item-opt ::before{
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-diamond.svg');
+    @include md {
+        background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/13f2e6e6b718b6abafb62ce7a672d42fc39eaeae/week3/icon-diamond-white.svg');
+    }
+}
+.item-sun ::before{
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/week3/icon-sun.svg');
+    @include md {
+        background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/13f2e6e6b718b6abafb62ce7a672d42fc39eaeae/week3/icon-sun-white.svg');
+    }
+}
+.item-fun ::before{
+    background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/13f2e6e6b718b6abafb62ce7a672d42fc39eaeae/week3/icon-thunder.svg');
+    @include md {
+        background-image: url('https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/13f2e6e6b718b6abafb62ce7a672d42fc39eaeae/week3/icon-thunder-white.svg');
+    }
+}
+
+.co-brand{
+    padding: 64px 0 80px 0;
+    background-image: url('https://github.com/hexschool/webLayoutTraining1st/blob/master/week3/bg.png?raw=true');
+    @include bg-cover;
+    @include lg {
+        padding: 40px 0;
+    }
+    @include md {
+        padding: 32px 0;
+    }
+    h2{
+        text-align: center;
+        font-weight: $font-weight-bold;
+        margin-bottom: 60px;
+        @include lg {
+            font-size: $font-size-h4;
+        }
+        @include md {
+            margin-bottom: 20px;
+        }
+    }
+    ul{
+        @include md {
+            flex-direction: column;
+        }
+        img{
+            opacity: .5;
+        }
+        li{
+            padding: 0 15px;
+            @include md {
+                margin-bottom: 15px;
+            }
+            a{
+                position: relative;
+                text-decoration: none;
+                background: #fff;
+                justify-content: center;
+                align-items: center;
+                
+            }
+            h3{
+                position: absolute;
+                font-size: 72px;
+                font-weight: $font-weight-bold;
+                @include lg {
+                    font-size: $font-size-h4;
+                }
+            }
+        }
+    }
+}
+
+.customer{
+    padding: 64px 0;
+    @include lg {
+        padding: 40px 0 12px;
+    }
+    @include md {
+        padding: 32px 0 16px;
+    }
+        h2{
+        text-align: center;
+        margin-bottom: 60px;
+        font-weight: $font-weight-bold;
+        @include lg {
+            font-size: $font-size-h4;
+        }
+        @include md {
+            font-size: $font-size-s;
+            margin-bottom: 20px;
+        }
+    }
+    ul{
+        @include lg {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        li{
+            margin: 0 15px 28px;
+            border: 1px solid #DEE2E6;
+            @include lg {
+                width: 45%;
+            }
+            @include md {
+                width: 100%;
+                margin-bottom: 16px;
+            }
+            img{
+                width: 100%;
+            }
+            .card-item {
+                h4{
+                    line-height: 2;
+                    font-size: 14px;
+                }
+                span{
+                    font-size: 14px;
+                    color: #707070;
+                }
+                padding: 15px;
+            }
+        }
+    }
+}
+
+.contact{
+    background: #AA06010D;
+    padding: 64px 0 80px 0;
+    @include lg {
+        padding: 40px 0;
+    }
+    p{
+        font-size: $font-size-s;
+        font-weight: $font-weight-bold;
+        margin-bottom: 20px;
+        @include lg {
+            margin-bottom: 12px;
+        }
+        @include md {
+            font-size: $font-size-base;
+            margin-bottom: 8px;
+        }
+    }
+    h2{
+        font-weight: $font-weight-bold;
+        text-align: center;
+        margin-bottom: 24px;
+        @include lg {
+            margin-bottom: 16px;
+        }
+        @include md {
+            font-size: $font-size-s;
+        }
+    }
+    .container {
+        max-width: 730px;
+        @include lg {
+            max-width: 450px;
+        }
+        @include md {
+            max-width: 350px;
+        }
+    }
+    form {
+        flex-direction: column;
+        justify-content: center;
+        input {
+            border: 1px solid #000;
+            background-color: transparent;
+            padding: 14px;
+            margin-bottom: 16px;
+            @include md {
+                margin-bottom: 8px;
+            }
+        }
+        textarea{
+            background-color: transparent;
+            border: 1px solid #000;
+            padding: 15px;
+            margin-bottom: 16px;
+            @include md {
+                margin-bottom: 8px;
+            }
+        }
+        .checkbox{
+            margin-bottom: 42px;
+            @include lg {
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+        }
+        .btn {
+            font-size: $font-size-base;
+            background: $primary;
+            color: $light;
+            border: none;
+            width: 50%;
+            margin: auto;
+            &:hover {
+                cursor: pointer;
+                background: $primary-dark;
+            }
+            @include md {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+footer{
+    padding: 24px 0;
+    background-color: $primary;
+    @include lg {
+        padding: 40px;
+    }
+    @include md {
+        padding: 23px 15px;
+    }
+    a{
+        text-decoration: none;
+        color: $light;
+        &:hover{
+            opacity: .4;
+        }
+    }
+    nav{
+        color: $light;
+        font-size: $font-size-base;
+        justify-content: space-between;
+        align-items: center;
+        @include lg {
+            margin-bottom: 24px;
+        }
+        .footer-bar{
+            li{
+                padding-right: 48px;
+                @include lg {
+                    padding-right: 40px;
+                }
+                @include md {
+                    display: none;
+                }
+            }
+        }
+        .social {
+            img{
+                padding-left: 32px;
+                @include lg {
+                    height: 24px;
+                    padding-left: 24px;
+                }
+            }
+        }
+    }
+    .footer-contact{
+        border-bottom: 1px solid $light;
+        @include lg {
+            padding-bottom: 13px;
+        }
+        li{
+            a{
+                text-decoration: none;
+                color: $light;
+                font-size: $font-size-xl;
+                display: flex;
+                align-items: center;
+                @include lg{
+                    font-size: $font-size-s;
+                    margin-bottom: 11px;
+                }
+                @include md {
+                    font-size: 16px;
+                    margin-bottom: 0;                  
+                }
+            }
+            img{
+                margin-right: 12px;
+                @include lg {
+                    width: 24px;
+                    height: 24px;
+                }
+                @include md {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            &:first-child img{
+                margin-right: 20px;
+                @include lg {
+                    margin-right: 13px;
+                }
+            }
+        }
+    }
+    .copyright{
+        padding: 24px 0 0 0;
+        align-items: center;
+        justify-content: space-between;
+        color: $light;
+        @include md {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 18px 0 0 0;
+        }
+        ul{
+            li:first-child{
+                margin-right: 62px;
+                @include lg {
+                    margin-right: 24px;
+                }
+            }
+            a{
+                font-size: $font-size-s;
+                @include lg {
+                    font-size: 14px;
+                }
+            }
+        }
+        .statement{
+            align-items: center;
+        }
+        img{
+            margin-right: 38px;
+            @include lg {
+                display: none;
+            }
+        }
+        .md-logo{
+            img {
+                display: none;
+                @include md {
+                    display: inline-block;
+                    width: 46px;
+                    margin: 0;
+                }
+            }
+        }
+        p {
+            @include md {
+                font-size: 14px;
+            }
+        }
+        .footer-bottom{
+            @include md {
+                width: 100%;
+                align-items: flex-end;
+                justify-content: space-between;
+            }
+            .footer-bottom-nav {
+                @include md {
+                    flex-direction: column;
+                }
+            }
+        }
+
+    }
+}

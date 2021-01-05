@@ -1,0 +1,17 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body {
+    line-height: $line-height-base;
+    font-family: 'Roboto', "Noto Sans TC";
+    font-size: $font-size-base;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.container{
+    max-width: 1110px;
+    height: auto;
+    margin: 0 auto;
+}
